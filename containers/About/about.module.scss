@@ -1,0 +1,12 @@
+.container {
+  max-width: 800px;
+  .box {
+    .personalPhoto {
+      width: 320px;
+      height: 320px;
+      position: relative;
+      background-color: var(--gray-200);
+      border-radius: 10px;
+    }
+  }
+}
