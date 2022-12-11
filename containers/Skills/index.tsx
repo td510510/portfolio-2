@@ -22,7 +22,7 @@ const Skills = () => {
       <div className={styles.box}>
         {
           icons.map((icon, i) => (
-            <div className={styles.icon} key={`icon-${i}`}>{icon}</div>
+            <div className={`${styles.icon} cursor-scale`} key={`icon-${i}`}>{icon}</div>
           ))
         }
       </div>
