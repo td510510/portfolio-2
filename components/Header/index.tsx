@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MenuMobile from '../../public/icons/hamburger-menu.svg'
 import styles from './header.module.scss'
 
 const Header = () => {
@@ -13,6 +14,7 @@ const Header = () => {
           <li><Link href='/projects'>Projects</Link></li>
           <li><Link href='/contact'>Contact</Link></li>
         </ul>
+        <div className={styles.menuMobile}><MenuMobile /></div>
       </div>
     </div>
   );
