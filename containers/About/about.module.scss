@@ -1,9 +1,11 @@
+@use '../../styles/breakpoint.scss' as *;
+
 .container {
   display: flex;
   align-items: center;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   padding-right: 30px;
-  padding-top: 30px;
+  padding-left: 30px;
   .box {
     max-width: 800px;
     margin: 0 auto;
@@ -40,7 +42,7 @@
           }
         }
       }
-      .detail {
+      .description {
         font-size: 15px;
         color: var(--gray-100);
         margin-top: 20px;
@@ -75,6 +77,20 @@
             }
           }
         }
+      }
+    }
+  }
+  .box {
+    grid-template-columns: unset;
+    margin-top: 30px;
+    gap: 40px;
+    .detail {
+      display: unset;
+      .description {
+        margin-bottom: 15px;
+      }
+      .contact {
+        margin-bottom: 30px;
       }
     }
   }

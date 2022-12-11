@@ -21,7 +21,7 @@ const About = () => {
             {' '}
             <span>Developer</span>
           </h3>
-          <div className={styles.detail}>
+          <div className={styles.description}>
             My name is Dang Duc Thinh. I am passionate about web development and learning technologies to increase the quality of my work. My goal is to become an expert in web development. As a positive thinker, I am open to new knowledge and willing to learn from friends and colleagues.
           </div>
           <div className={styles.contact}>
