@@ -25,12 +25,12 @@ const About = () => {
             My name is Dang Duc Thinh. I am passionate about web development and learning technologies to increase the quality of my work. My goal is to become an expert in web development. As a positive thinker, I am open to new knowledge and willing to learn from friends and colleagues.
           </div>
           <div className={styles.contact}>
-            <div className={styles.icon}>
+            <a className={styles.icon} href='https://github.com/td510510' target='_blank' rel="noreferrer">
               <GitHubIcon />
-            </div>
-            <div className={`${styles.icon} ${styles.linkedin}`}>
+            </a>
+            <a className={`${styles.icon} ${styles.linkedin}`} href='https://www.linkedin.com/in/thinh-dang-9b44171b2/' target='_blank' rel="noreferrer">
               <LinkedInIcon />
-            </div>
+            </a>
           </div>
         </div>
       </div>
