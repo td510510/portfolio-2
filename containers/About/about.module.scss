@@ -80,17 +80,19 @@
       }
     }
   }
-  .box {
-    grid-template-columns: unset;
-    margin-top: 30px;
-    gap: 40px;
-    .detail {
-      display: unset;
-      .description {
-        margin-bottom: 15px;
-      }
-      .contact {
-        margin-bottom: 30px;
+  @media screen and (max-width: $maxWidthMobile) {
+    .box {
+      grid-template-columns: unset;
+      margin-top: 30px;
+      gap: 40px;
+      .detail {
+        display: unset;
+        .description {
+          margin-bottom: 15px;
+        }
+        .contact {
+          margin-bottom: 30px;
+        }
       }
     }
   }
