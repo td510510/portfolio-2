@@ -28,9 +28,13 @@
       li {
         margin-left: 30px;
         cursor: pointer;
-        &:hover,
-        &:active {
-          color: #eb4a4c;
+        font-size: 15px;
+        a {
+          &:hover,
+          &:active {
+            color: #eb4a4c;
+            transition: color 0.25s;
+          }
         }
       }
     }

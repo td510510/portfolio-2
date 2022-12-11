@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './header.module.scss'
 
 const Header = () => {
@@ -6,11 +7,11 @@ const Header = () => {
       <div className={styles.wrapper}>
         <div className={styles.logo}>TD</div>
         <ul className={styles.nav} role='list'>
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li><Link href='/'>Home</Link></li>
+          <li><Link href='/about'>About</Link></li>
+          <li><Link href='/skills'>Skills</Link></li>
+          <li><Link href='/projects'>Projects</Link></li>
+          <li><Link href='/contact'>Contact</Link></li>
         </ul>
       </div>
     </div>

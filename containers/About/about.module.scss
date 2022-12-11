@@ -16,6 +16,8 @@
       border-radius: 10px;
     }
     .detail {
+      display: flex;
+      flex-direction: column;
       .name {
         font-weight: 700;
         font-size: 32px;
@@ -44,6 +46,8 @@
       .contact {
         display: flex;
         align-items: center;
+        margin-top: auto;
+        margin-bottom: 10px;
         .icon {
           width: 40px;
           height: 40px;
