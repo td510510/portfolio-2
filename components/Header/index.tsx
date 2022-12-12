@@ -39,6 +39,7 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
+      <div className={`${styles.shadow} ${isOpenMenu ? styles.show : styles.hide}`}></div>
       <div className={styles.wrapper}>
         <div className={`${styles.logo} cursor-scale`}>TD</div>
         <ul className={styles.navDesktop} role='list'>
