@@ -11,14 +11,22 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   useLayoutEffect(() => {
-    let cursor = document.querySelector('.cursor'),
+    let cursor = document.querySelector('.cursor') as HTMLElement,
       cursorScale = document.querySelectorAll('.cursor-scale'),
       mouseX = 0,
       mouseY = 0
 
-    let ctx = gsap.context(() => {
+    cursor.style.display = 'none'
 
-      gsap.to({}, 0.016, {
+    function setMousePosition(e: MouseEvent) {
+      mouseX = e.clientX;
+      mouseY = e.clientY
+      cursor.style.display = 'block'
+    }
+
+    let ctx = gsap.context(() => {
+      gsap.to(cursor, {
+        duration: 0.01,
         repeat: -1,
         onRepeat: function () {
           gsap.set(cursor, {
@@ -30,25 +38,21 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       });
 
-      window.addEventListener("mousemove", function (e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY
-      });
-
-      cursorScale.forEach(link => {
-        link.addEventListener('mouseleave', () => {
-          cursor?.classList.remove('grow');
-        });
-        link.addEventListener('mousemove', () => {
-          cursor?.classList.add('grow');
-        });
-      });
-
     }, app);
+
+    window.addEventListener("mousemove", (e) => setMousePosition(e));
+
+    cursorScale.forEach(link => {
+      link.addEventListener('mouseleave', () => {
+        cursor?.classList.remove('grow');
+      });
+      link.addEventListener('mousemove', () => {
+        cursor?.classList.add('grow');
+      });
+    });
 
     return () => ctx.revert();
   }, [router.asPath]);
-
 
   return (
     <div ref={app}>

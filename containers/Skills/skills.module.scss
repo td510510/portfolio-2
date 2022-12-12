@@ -1,3 +1,5 @@
+@use '../../styles/breakpoint.scss' as *;
+
 .container {
   display: flex;
   align-items: center;
@@ -34,6 +36,15 @@
             transition: fill 0.25s;
           }
         }
+      }
+    }
+  }
+  @media screen and (max-width: $maxWidthSmallMobile) {
+    .box {
+      justify-content: space-around;
+      .icon {
+        width: 100px;
+        height: 100px;
       }
     }
   }

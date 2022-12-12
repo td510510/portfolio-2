@@ -5,6 +5,7 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 /* Box sizing rules */
@@ -107,6 +108,7 @@ select {
   transform-origin: center center;
   pointer-events: none;
   z-index: 1000;
+  display: none;
 }
 
 .grow {
