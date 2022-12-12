@@ -13,9 +13,9 @@ const Skills = () => {
     <><CssIcon /></>,
     <><SassIcon /></>,
     <><JavascriptIcon /></>,
+    <><TypescriptIcon /></>,
     <><ReactJsIcon /></>,
     <><NextJsIcon /></>,
-    <><TypescriptIcon /></>,
   ]
   return (
     <div className={styles.container}>
