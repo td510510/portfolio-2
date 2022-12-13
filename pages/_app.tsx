@@ -57,8 +57,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div ref={app}>
       <Head>
-        <link rel="preload" href="/videos/wave.mp4" as="video" />
-        <link rel="preload" href="/images/personal_photo.png" as="image" />
+        <link rel="preload" href="/videos/wave.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/videos/wave_mobile.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/images/personal_photo.png" as="image" crossOrigin='' />
         <title>Thinh Dang Portfolio</title>
       </Head>
       <Component {...pageProps} />
