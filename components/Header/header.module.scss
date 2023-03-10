@@ -126,7 +126,7 @@
       }
       .navMobile {
         display: block;
-        transition: transform 0.3s;
+        transition: all 0.3s;
         &.show {
           transform: translateX(0%);
           opacity: 1;

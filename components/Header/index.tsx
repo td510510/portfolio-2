@@ -1,14 +1,22 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 import MenuMobile from '../../public/icons/hamburger-menu.svg'
 import CloseIcon from '../../public/icons/close-menu.svg'
+import toggleScroll from '../../utils/toggleScroll';
 import styles from './header.module.scss'
-import { useRouter } from 'next/router';
 
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
+  const menuMobileRef = useRef(null)
   const router = useRouter()
   const currentPath = router.asPath
+  useOnClickOutside(menuMobileRef, () => setIsOpenMenu(false))
+
+  useEffect(() => {
+    toggleScroll(isOpenMenu)
+  }, [isOpenMenu])
 
   const menu = [
     {
@@ -53,7 +61,7 @@ const Header = () => {
         <div className={`${styles.closeIcon} ${isOpenMenu ? styles.show : styles.hide}`} onClick={closeMenu}>
           <CloseIcon />
         </div>
-        <ul className={`${styles.navMobile} ${isOpenMenu ? styles.show : styles.hide}`} role='list'>
+        <ul className={`${styles.navMobile} ${isOpenMenu ? styles.show : styles.hide}`} role='list' ref={menuMobileRef}>
           {
             menu.map((item: { link: string, sub: string }, i) => (
               <li className='cursor-scale' key={`link-${i}`} onClick={closeMenu}><Link href={item.link} className={currentPath === item.link ? styles.active : ''}>{item.sub}</Link></li>

@@ -8,6 +8,12 @@ const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
   const slideData = [
     {
+      name: 'Yola Yoga',
+      image: '/images/yoga.png',
+      sourceCode: 'https://github.com/td510510/yola-landingpage',
+      website: 'https://yola-yoga.netlify.app/',
+    },
+    {
       name: 'Gbox',
       image: '/images/gbox.jpg',
       sourceCode: 'https://github.com/td510510/GBOX',
