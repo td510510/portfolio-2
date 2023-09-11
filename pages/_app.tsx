@@ -57,10 +57,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div ref={app}>
       <Head>
+        <link rel="shortcut icon" href="/images/logo-thinh.png" type="image/x-icon" />
         <link rel="preload" href="/videos/wave.mp4" as="video" type="video/mp4" />
         <link rel="preload" href="/videos/wave_mobile.mp4" as="video" type="video/mp4" />
         <link rel="preload" href="/images/personal_photo.png" as="image" crossOrigin='' />
         <title>Thinh Dang Portfolio</title>
+        <meta name="description" content="My name is Thinh. I am passionate about web development and learning technologies to increase the quality of my work. My goal is to become an expert in web development. As a positive thinker, I am open to new knowledge and willing to learn from friends and colleagues." />
       </Head>
       <Component {...pageProps} />
       <div className="cursor"></div>
