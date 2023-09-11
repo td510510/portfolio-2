@@ -43,29 +43,43 @@
           .info {
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            text-align: center;
             padding-left: 20px;
             padding-right: 30px;
-            gap: 30px;
-            .name,
-            .num {
+            gap: 7px;
+            letter-spacing: 2px;
+            .name {
               font-size: 16px;
             }
             .subInfo {
               font-size: 13px;
+              font-weight: 300;
+              line-height: 21px;
               .tech,
               .time {
                 font-size: 12px;
-                font-weight: 300;
               }
               .time {
                 text-decoration: underline;
               }
             }
           }
-          .button:first-child {
+          .num {
+            &.desktop {
+              display: block;
+            }
+            &.mobile {
+              display: none;
+            }
+            font-size: 16px;
+          }
+          .buttons {
             margin-top: 15px;
+            display: flex;
+            gap: 15px;
             margin-bottom: 15px;
           }
         }
@@ -121,19 +135,31 @@
         .slide {
           .description {
             .info {
-              .name,
-              .num {
-                font-size: 13px;
-                width: fit-content;
+              gap: 5px;
+              flex-direction: column;
+              .name {
+                font-size: 14px;
+                // width: fit-content;
               }
               .subInfo {
                 font-size: 12px;
+                text-align: center;
+                line-height: 18px;
                 .tech,
                 .time {
                   font-size: 11px;
                   font-weight: 300;
                 }
               }
+            }
+            .num {
+              &.desktop {
+                display: none;
+              }
+              &.mobile {
+                display: block;
+              }
+              font-size: 10px;
             }
           }
         }
