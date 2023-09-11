@@ -123,13 +123,12 @@ const Projects = () => {
                       {' '}<span className={styles.time}>{item.time}</span><br />
                       {' '}<span className={styles.tech}>{item.tech}</span>
                     </div>
-                    {/* <div className={`${styles.num} ${styles.desktop}`}>{i + 1}/{slideData.length}</div> */}
                   </div>
                   <div className={styles.buttons}>
                     {item.website && <div className={styles.button}><Button content='View' link={item.website} /></div>}
                     {item.sourceCode && <div className={styles.button}><Button content='Source Code' link={item.sourceCode} /></div>}
                   </div>
-                  <div className={`${styles.num} ${styles.mobile}`}>{i + 1}/{slideData.length}</div>
+                  <div className={styles.num}>{i + 1}/{slideData.length}</div>
                 </div>
               </div>
             ))
