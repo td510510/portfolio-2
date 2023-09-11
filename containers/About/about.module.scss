@@ -13,9 +13,6 @@
     grid-template-columns: 4fr 6fr;
     gap: 75px;
     .personalPhoto {
-      width: 320px;
-      height: 320px;
-      position: relative;
       background-color: var(--gray-200);
       border-radius: 10px;
     }

@@ -8,7 +8,9 @@ const About = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.personalPhoto}>
-          <Image src='/images/personal_photo.png' alt='Personal Photo' fill />
+          <Image className={styles.img}
+            style={{ maxWidth: 320, width: '100%', height: 'auto', margin: '0 auto' }}
+            src='/images/personal_photo.png' alt='Personal Photo' width={320} height={320} />
         </div>
         <div className={styles.detail}>
           <h3 className={styles.name}>
